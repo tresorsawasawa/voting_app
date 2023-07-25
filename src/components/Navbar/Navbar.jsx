@@ -8,29 +8,31 @@ const Navbar = () => {
       id: uuid(),
       name: 'Login',
       to: '/sign_in',
-      className: 'clickable'
+      className: 'clickable',
     },
     {
       id: uuid(),
       name: 'Sign Up',
       to: '/sign_up',
-      className: 'clickable'
+      className: 'clickable',
     },
   ];
 
-  return(
+  return (
     links.map(
-      ({ id, name, to, className }) => (
+      ({
+        id, name, to, className,
+      }) => (
         <NavLink
-         key={id}
-         to={to}
-         className={className}
+          key={id}
+          to={to}
+          className={className}
         >
           {name}
         </NavLink>
-      )
+      ),
     )
-  )
+  );
 };
 
 export default Navbar;
