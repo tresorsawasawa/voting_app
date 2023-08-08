@@ -36,7 +36,10 @@ const Navbar = () => {
       </div>
 
       <div className="icons">
-        <img src={UserImage} alt="user avatar" className="userImage" />
+        <div className="user">
+          <img src={UserImage} alt="user avatar" className="userImage" />
+          <span className="userName">Tresor</span>
+        </div>
         {/* {links.map(({
           id, name, to, className,
         }) => (

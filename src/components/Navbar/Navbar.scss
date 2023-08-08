@@ -20,14 +20,21 @@
     }
   }
 
-  .icons {
+  .user {
     padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     .userImage {
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
       object-fit: cover;
+    }
+
+    .userName {
+      font-size: 0.7rem;
     }
   }
 }
