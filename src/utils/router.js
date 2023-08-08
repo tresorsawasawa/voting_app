@@ -1,9 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import App from '../App';
-import NotFound from '../components/NotFound/NotFound';
-import Login from '../components/Login/Login';
-import Register from '../components/Register/Register';
+import NotFound from '../pages/NotFound/NotFound';
+import Login from '../pages/Authentication/Login/Login';
+import Register from '../pages/Authentication/Register/Register';
+import AuthLayout from '../pages/Authentication/AuthenticationLayout';
+import Home from '../pages/Home/Home';
+import Candidates from '../pages/Candidates/Candidates';
+import Elections from '../pages/Elections/Elections';
+import Electors from '../pages/Electors/Electors';
 
 const router = createBrowserRouter([
   {
@@ -12,12 +17,33 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: '/sign_in',
-        element: <Login />,
+        path: '/',
+        element: <Home />,
       },
       {
-        path: '/sign_up',
-        element: <Register />,
+        path: '/candidates',
+        element: <Candidates />,
+      },
+      {
+        path: '/elections',
+        element: <Elections />,
+      },
+      {
+        path: '/electors',
+        element: <Electors />,
+      },
+      {
+        element: <AuthLayout />,
+        children: [
+          {
+            path: '/sign_in',
+            element: <Login />,
+          },
+          {
+            path: '/sign_up',
+            element: <Register />,
+          },
+        ],
       },
     ],
   },
