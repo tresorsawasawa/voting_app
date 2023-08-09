@@ -9,6 +9,7 @@ import Home from '../pages/Home/Home';
 import Candidates from '../pages/Candidates/Candidates';
 import Elections from '../pages/Elections/Elections';
 import Electors from '../pages/Electors/Electors';
+import Candidate from '../pages/Candidate/Candidate';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/electors',
         element: <Electors />,
+      },
+      {
+        path: '/users/1',
+        element: <Candidate />,
       },
       {
         element: <AuthLayout />,

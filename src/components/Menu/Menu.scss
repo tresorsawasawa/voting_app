@@ -1,0 +1,37 @@
+@import '../../assets/styles/base/variables';
+
+.menu {
+  // height: 80vh;
+
+  .items {
+    .item {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 7px;
+      border-bottom: 1px solid $soft-bg;
+
+      .title {
+        font-size: 12px;
+        font-weight: 200;
+        color: $soft-color;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $soft-bg;
+        }
+
+        .icon {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,14 @@
 import React from 'react';
 import './Footer.scss';
+import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 
 const Footer = () => (
   <div className="footer">
-    <span>Copyright@2023</span>
-    <span>Lorem ipsum dolor sit consectetur.</span>
+    <span>
+      <AiOutlineCopyrightCircle />
+      2023,
+    </span>
+    <span>Lorem ipsum</span>
   </div>
 );
 export default Footer;

@@ -36,10 +36,10 @@ const Navbar = () => {
       </div>
 
       <div className="icons">
-        <div className="user">
+        <NavLink to="/users/1" className="user">
           <img src={UserImage} alt="user avatar" className="userImage" />
           <span className="userName">Tresor</span>
-        </div>
+        </NavLink>
         {/* {links.map(({
           id, name, to, className,
         }) => (
