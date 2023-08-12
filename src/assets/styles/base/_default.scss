@@ -8,9 +8,6 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
-  background-color: $main-bg;
-  color: $main-color;
 }
 
 .clickable:hover {
@@ -23,27 +20,41 @@ a {
 }
 
 .main {
+  position: relative;
+  height: 100%;
   font-family: 'Inter', sans-serif;
   background-color: $main-bg;
   color: $main-color;
+
+  .container {
+    display: flex;
+
+    .menuContainer {
+      width: 250px;
+      padding: 5px 20px;
+      border-right: 2px solid $soft-bg;
+
+      // @include lg{
+      //   width: max-content;
+      // }
+    }
+
+    .contentContainer {
+      padding: 5px 20px;
+      width: 100%;
+    }
+  }
 }
 
-.container {
-  display: flex;
+.stroke-text {
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $main-color;
 }
 
-.menuContainer {
-  border: solid red;
-  width: 250px;
-  padding: 5px 20px;
-  border-right: 2px solid $soft-bg;
-
-  // @include lg{
-  //   width: max-content;
-  // }
-}
-
-.contentContainer {
-  padding: 5px 20px;
-  width: 100%;
+button {
+  border: none;
+  outline: none;
+  background: none;
 }

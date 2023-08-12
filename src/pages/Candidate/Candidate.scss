@@ -1,0 +1,78 @@
+@import '../../assets/styles/base/variables.scss';
+@import '../../assets/styles/base/mixins.scss';
+
+.profile {
+  margin: 0 auto;
+  max-width: 80%;
+  min-width: 300px;
+  border: 1px solid $soft-color;
+  border-radius: 1rem;
+
+  .userContainer {
+    @include flex_column;
+
+    gap: 0.7rem;
+    padding: 1rem;
+    position: relative;
+
+    .imgContainer {
+      @include flex_center_center(row);
+
+      margin-bottom: 1rem;
+
+      .profileImage {
+        width: 150px;
+        height: 150px;
+        justify-self: center;
+      }
+    }
+
+    .between {
+      @include flex_between_center(row);
+
+      background: $soft-bg;
+      padding: 5px 8px;
+      border-radius: 5px;
+
+      .label {
+        padding: 10px 0;
+      }
+    }
+
+    .regNumber {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      background-color: $main-color;
+      padding: 10px;
+      font-size: 1.8rem;
+      color: $dark-bg;
+      border-radius: 50%;
+      font-weight: 700;
+    }
+
+    .voteBtn {
+      position: absolute;
+      right: 1rem;
+      top: 150px;
+      background-color: green;
+      padding: 10px 10px;
+      color: $main-color;
+      font-weight: bold;
+      border-radius: 5px;
+
+      &:hover {
+        transform: scale(1.19);
+        transition: ease-in-out 0.5s;
+        background: none;
+        border: 1.5px solid $main-color;
+      }
+
+      &:active {
+        transition: ease-in 0.2s;
+        background-color: green;
+        border: 1.5px solid $main-color;
+      }
+    }
+  }
+}

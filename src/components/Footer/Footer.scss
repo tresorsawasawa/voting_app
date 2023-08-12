@@ -1,0 +1,23 @@
+@import '../../assets/styles/base/_variables';
+
+.footer {
+  // position: absolute;
+  // bottom: 0;
+  display: flex;
+  justify-content: start;
+  padding: 1.5rem;
+
+  span {
+    &:first-child {
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:last-child {
+      font-size: 14px;
+      padding-left: 10px;
+    }
+  }
+}
