@@ -1,0 +1,46 @@
+@import '../../assets/styles/base/variables.scss';
+@import '../../assets/styles/base/mixins.scss';
+
+.dataTable {
+  // padding: 10px;
+
+  .Box {
+    .dataGrid {
+      background-color: $main-color;
+      padding: 20px;
+
+      .MuiDataGrid-toolbarContainer {
+        flex-direction: row-reverse;
+      }
+
+      .avatar {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .voteBtn {
+        margin: 0 auto;
+        background-color: green;
+        padding: 10px 15px;
+        color: $main-color;
+        font-weight: bold;
+        border-radius: 5px;
+
+        &:hover {
+          transform: scale(1.15);
+          transition: ease-in-out 0.5s;
+          background: $main-bg;
+          border: 1.5px solid $main-color;
+        }
+
+        &:active {
+          transition: ease-in 0.2s;
+          background-color: green;
+          border: 1.5px solid $main-color;
+        }
+      }
+    }
+  }
+}

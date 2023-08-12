@@ -1,12 +1,12 @@
 import React from 'react';
 import DataTable from '../../components/DataTable/DataTable';
 
-const Candidates = () => (
-  <section className="candidates">
-    <h2>Candidates</h2>
+const Vote = () => (
+  <section className="vote">
+    <h2>Vote Your Favorite Candidate</h2>
 
     <DataTable />
   </section>
 );
 
-export default Candidates;
+export default Vote;

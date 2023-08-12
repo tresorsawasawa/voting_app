@@ -1,0 +1,33 @@
+@import '../../../assets/styles/base/variables.scss';
+@import '../../../assets/styles/base/mixins.scss';
+
+// .main {
+//   display: none;
+// }
+
+.login {
+  display: block;
+  color: white;
+
+  @include flex_center_center(column);
+
+  border: solid white;
+  margin: 3rem auto;
+  max-width: 350px;
+  min-width: 300px;
+}
+
+// .header,
+// .menu,
+// .footer,
+// .menuContainer {
+//   display: none;
+// }
+
+// .main {
+//   background: none;
+// }
+
+// .menuContainer {
+//   di
+// }

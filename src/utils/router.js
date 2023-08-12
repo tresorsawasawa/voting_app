@@ -10,6 +10,8 @@ import Candidates from '../pages/Candidates/Candidates';
 import Elections from '../pages/Elections/Elections';
 import Electors from '../pages/Electors/Electors';
 import Candidate from '../pages/Candidate/Candidate';
+import Vote from '../pages/Vote/Vote';
+import User from '../pages/User/User';
 
 const router = createBrowserRouter([
   {
@@ -34,8 +36,16 @@ const router = createBrowserRouter([
         element: <Electors />,
       },
       {
-        path: '/users/1',
+        path: '/vote_candidate',
+        element: <Vote />,
+      },
+      {
+        path: '/candidates/:id',
         element: <Candidate />,
+      },
+      {
+        path: '/users/:id',
+        element: <User />,
       },
       {
         element: <AuthLayout />,

@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 import {
   AiOutlineHome,
   AiOutlineUser,
@@ -9,8 +7,9 @@ import {
 import { HiOutlineUserGroup } from 'react-icons/hi';
 import { RiLogoutCircleLine, RiAdminLine } from 'react-icons/ri';
 import { MdOutlineHowToVote } from 'react-icons/md';
+import CandidateAvatar from '../assets/images/user_avatar.png';
 
-const data = [
+const links = [
   {
     id: 1,
     title: 'MAIN',
@@ -72,11 +71,80 @@ const data = [
       {
         id: 2,
         title: 'Logout',
-        path: '/',
+        path: '/sign_in',
         icon: <RiLogoutCircleLine className="icon" />,
       },
     ],
   },
 ];
 
-export default data;
+const candidatesRow = [
+  {
+    id: 1,
+    image: CandidateAvatar,
+    lastName: 'Snow',
+    firstName: 'Jon',
+    email: 'jonsnow@example.com',
+    phone: '123456789',
+    city: 'Kigali',
+    province: 'Kigali',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+  },
+  {
+    id: 2,
+    image: CandidateAvatar,
+    lastName: 'Peter',
+    firstName: 'Parker',
+    email: 'peterparker@example.com',
+    phone: '123456789',
+    city: 'Paris',
+    province: 'Monaco',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+  },
+  {
+    id: 3,
+    image: CandidateAvatar,
+    lastName: 'Snow',
+    firstName: 'Jon',
+    email: 'jonsnow@example.com',
+    phone: '123456789',
+    city: 'Kigali',
+    province: 'Kigali',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+  },
+  {
+    id: 4,
+    image: CandidateAvatar,
+    lastName: 'Snow',
+    firstName: 'Jon',
+    email: 'jonsnow@example.com',
+    phone: '123456789',
+    city: 'Kigali',
+    province: 'Kigali',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+  },
+  {
+    id: 5,
+    image: CandidateAvatar,
+    lastName: 'Snow',
+    firstName: 'Jon',
+    email: 'jonsnow@example.com',
+    phone: '123456789',
+    city: 'Kigali',
+    province: 'Kigali',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+  },
+  {
+    id: 6,
+    image: CandidateAvatar,
+    lastName: 'Delphin',
+    firstName: 'Kaduli',
+    email: 'delphinkaduli@example.com',
+    phone: '123456789',
+    city: 'Kigali',
+    province: 'Kigali',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+  },
+];
+
+export { links, candidatesRow };

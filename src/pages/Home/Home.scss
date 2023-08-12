@@ -1,0 +1,62 @@
+@import '../../assets/styles/base/variables.scss';
+@import '../../assets/styles/base/mixins.scss';
+
+.home {
+  @include flex_between_start(row);
+
+  position: relative;
+  width: 100%;
+
+  .leftHome {
+    width: 70%;
+
+    .the-best-ad {
+      @include flex_start(column);
+
+      position: relative;
+      background-color: $soft-bg;
+      border-radius: 3.5rem;
+      width: fit-content;
+      padding: 20px 13px;
+      text-transform: uppercase;
+      color: $main-color;
+      font-weight: bold;
+      margin-bottom: 3rem;
+
+      span {
+        z-index: 2;
+      }
+
+      .background {
+        position: absolute;
+        background-color: rgb(29, 204, 204);
+        width: 5.4rem;
+        height: 80%;
+        left: 8px;
+        border-radius: 3rem;
+        z-index: 1;
+      }
+    }
+
+    .hero-text {
+      @include flex_start(column);
+
+      text-transform: uppercase;
+      font-size: 5rem;
+      font-weight: bold;
+      color: $main-color;
+      text-overflow: inherit;
+      margin-bottom: 3rem;
+
+      .text-description {
+        padding-top: 0.8rem;
+        font-size: 1rem;
+        font-weight: 200;
+        text-transform: none;
+        letter-spacing: 1px;
+        width: 70%;
+        color: $soft-color;
+      }
+    }
+  }
+}

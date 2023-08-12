@@ -2,18 +2,18 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import menu from '../../utils/data';
+import { links } from '../../utils/data';
 
 import './Menu.scss';
 
 const Menu = () => {
-  console.log(menu);
+  console.log(links);
 
   return (
 
     <section className="menu">
       <ul className="items">
-        {menu.map((item) => (
+        {links.map((item) => (
           <li className="item" key={item.id}>
             <span className="title">{item.title}</span>
             {item.listItems.map((listItem) => (
