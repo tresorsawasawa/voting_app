@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/voting_app/static/css/main.f444cc7c.css",
-    "main.js": "/voting_app/static/js/main.87025210.js",
+    "main.js": "/voting_app/static/js/main.494ebdf7.js",
     "static/media/404.jpg": "/voting_app/static/media/404.f188a6e2a278c12a92e6.jpg",
     "static/media/user_avatar.png": "/voting_app/static/media/user_avatar.5b6adb8e38ee506fde52.png",
     "index.html": "/voting_app/index.html",
     "main.f444cc7c.css.map": "/voting_app/static/css/main.f444cc7c.css.map",
-    "main.87025210.js.map": "/voting_app/static/js/main.87025210.js.map"
+    "main.494ebdf7.js.map": "/voting_app/static/js/main.494ebdf7.js.map"
   },
   "entrypoints": [
     "static/css/main.f444cc7c.css",
-    "static/js/main.87025210.js"
+    "static/js/main.494ebdf7.js"
   ]
 }
