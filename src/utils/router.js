@@ -8,10 +8,10 @@ import AuthLayout from '../pages/Authentication/AuthenticationLayout';
 import Home from '../pages/Home/Home';
 import Candidates from '../pages/Candidates/Candidates';
 import Elections from '../pages/Elections/Elections';
-import Electors from '../pages/Electors/Electors';
+import Voters from '../pages/Voters/Voters';
 import Candidate from '../pages/Candidate/Candidate';
 import Vote from '../pages/Vote/Vote';
-import User from '../pages/User/User';
+import Voter from '../pages/Voter/Voter';
 
 const router = createBrowserRouter([
   {
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
         element: <Elections />,
       },
       {
-        path: '/electors',
-        element: <Electors />,
+        path: '/voters',
+        element: <Voters />,
       },
       {
         path: '/vote_candidate',
@@ -44,8 +44,8 @@ const router = createBrowserRouter([
         element: <Candidate />,
       },
       {
-        path: '/users/:id',
-        element: <User />,
+        path: '/voters/:id',
+        element: <Voter />,
       },
       {
         element: <AuthLayout />,

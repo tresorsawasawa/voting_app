@@ -1,0 +1,15 @@
+@import '../../assets/styles/base/variables.scss';
+@import '../../assets/styles/base/mixins.scss';
+
+.table {
+  border: 1px solid $soft-bg;
+  width: 100%;
+
+  .head {
+    border-bottom: solid !important;
+
+    tr {
+      border-bottom: solid !important;
+    }
+  }
+}

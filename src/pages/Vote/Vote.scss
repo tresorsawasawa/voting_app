@@ -2,9 +2,69 @@
 @import '../../assets/styles/base/mixins.scss';
 
 .vote {
-  // gap: 2rem;
+  .title {
+    margin-bottom: 1rem;
+  }
 
-  // h2 {
-  //   margin-bottom: 1rem;
-  // }
+  .candidatesList {
+    @include flex_center_center(row);
+
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .candidate {
+      border: 1px solid $main-color;
+      padding: 10px;
+      box-shadow: 4px 3px $mainCardsShadow;
+
+      .candidateCard {
+        @include flex_center_center(column);
+
+        min-width: 300px;
+
+        img {
+          width: 90px;
+          height: 90px;
+        }
+
+        .candidateInfo {
+          width: 100%;
+          padding: 10px;
+
+          .between {
+            @include flex_between_center(row);
+
+            padding: 10px 5px;
+            border-radius: 5px;
+
+            &:nth-child(odd) {
+              background-color: $soft-bg;
+            }
+          }
+        }
+
+        .voteBtn {
+          background-color: green;
+          padding: 10px 20px;
+          color: $main-color;
+          font-weight: bold;
+          border-radius: 5px;
+          font-size: 1.2rem;
+
+          &:hover {
+            transform: scale(1.19);
+            transition: ease-in-out 0.5s;
+            background: none;
+            border: 1.5px solid $main-color;
+          }
+
+          &:active {
+            transition: ease-in 0.2s;
+            background-color: green;
+            border: 1.5px solid $main-color;
+          }
+        }
+      }
+    }
+  }
 }
