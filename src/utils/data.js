@@ -8,6 +8,7 @@ import { HiOutlineUserGroup } from 'react-icons/hi';
 import { RiLogoutCircleLine, RiAdminLine } from 'react-icons/ri';
 import { MdOutlineHowToVote } from 'react-icons/md';
 import CandidateAvatar from '../assets/images/user_avatar.png';
+import Avatar from '../assets/images/no_avatar.png';
 
 const links = [
   {
@@ -23,7 +24,7 @@ const links = [
       {
         id: 2,
         title: 'Profile',
-        path: '/users/1',
+        path: '/voters/:id',
         icon: <AiOutlineUser className="icon" />,
       },
     ],
@@ -46,8 +47,8 @@ const links = [
       },
       {
         id: 3,
-        title: 'Electors',
-        path: '/electors',
+        title: 'Voters',
+        path: '/voters',
         icon: <HiOutlineUserGroup className="icon" />,
       },
       {
@@ -86,9 +87,12 @@ const candidatesRow = [
     firstName: 'Jon',
     email: 'jonsnow@example.com',
     phone: '123456789',
+    position: 'President',
+    politicalParty: 'RPF',
     city: 'Kigali',
     province: 'Kigali',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
   },
   {
     id: 2,
@@ -98,8 +102,11 @@ const candidatesRow = [
     email: 'peterparker@example.com',
     phone: '123456789',
     city: 'Paris',
+    position: 'Deputy',
+    politicalParty: 'CDP',
     province: 'Monaco',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
   },
   {
     id: 3,
@@ -109,8 +116,11 @@ const candidatesRow = [
     email: 'jonsnow@example.com',
     phone: '123456789',
     city: 'Kigali',
+    position: 'President',
+    politicalParty: 'PL',
     province: 'Kigali',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
   },
   {
     id: 4,
@@ -120,8 +130,11 @@ const candidatesRow = [
     email: 'jonsnow@example.com',
     phone: '123456789',
     city: 'Kigali',
+    position: 'President',
     province: 'Kigali',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+    politicalParty: 'PVDR',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
   },
   {
     id: 5,
@@ -131,8 +144,11 @@ const candidatesRow = [
     email: 'jonsnow@example.com',
     phone: '123456789',
     city: 'Kigali',
+    position: 'Deputy',
     province: 'Kigali',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+    politicalParty: 'PS',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
   },
   {
     id: 6,
@@ -142,9 +158,91 @@ const candidatesRow = [
     email: 'delphinkaduli@example.com',
     phone: '123456789',
     city: 'Kigali',
+    position: 'Deputy',
     province: 'Kigali',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias et corporis excepturi, quibusdam repellat vel doloremque?',
   },
 ];
 
-export { links, candidatesRow };
+const elections = [
+  {
+    id: 1,
+    title: 'President',
+    candidates: [
+      {
+        id: 1,
+        image: Avatar,
+        firstName: 'Joseph',
+        lastName: 'MacGarret',
+        votes: [1, 2, 3],
+      },
+      {
+        id: 2,
+        image: Avatar,
+        firstName: 'William',
+        lastName: 'MacGarret',
+        votes: [2],
+      },
+      {
+        id: 3,
+        image: Avatar,
+        firstName: 'Jacob',
+        lastName: 'MacGarret',
+        votes: [],
+      },
+    ],
+    votes: ['1', '2', '3'],
+  },
+  {
+    id: 2,
+    title: 'Deputy',
+    candidates: [
+      {
+        id: 1,
+        image: Avatar,
+        firstName: 'Isaac',
+        lastName: 'MacGarret',
+        votes: [],
+      },
+    ],
+    votes: [],
+  },
+];
+
+const voters = [
+  {
+    id: 1,
+    image: Avatar,
+    firstName: 'Phil',
+    lastName: 'Phoden',
+    voteCode: 123456,
+    hasVoted: false,
+    votedCandidate: 'Isaac',
+  },
+  {
+    id: 2,
+    image: Avatar,
+    firstName: 'James',
+    lastName: 'Rodriguez',
+    voteCode: 123456,
+    hasVoted: false,
+    votedCandidate: 'Isaac',
+  },
+  {
+    id: 3,
+    image: Avatar,
+    firstName: 'Muhamed',
+    lastName: 'Salah',
+    voteCode: 123456,
+    hasVoted: false,
+    votedCandidate: 'Isaac',
+  },
+];
+
+export {
+  links,
+  candidatesRow,
+  elections,
+  voters,
+};
