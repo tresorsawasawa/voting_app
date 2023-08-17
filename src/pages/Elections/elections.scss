@@ -1,0 +1,26 @@
+@import '../../assets/styles/base/variables.scss';
+@import '../../assets/styles/base/mixins.scss';
+
+.elections {
+  .electionContainer {
+    @include flex_row;
+
+    width: 100%;
+    gap: 1rem;
+
+    .electionCard {
+      padding: 10px;
+      width: 50%;
+      border: 1px solid $soft-bg;
+      gap: 1rem;
+
+      .title {
+        margin-bottom: 1rem;
+      }
+
+      .totalVotes {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
